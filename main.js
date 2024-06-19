@@ -1,37 +1,59 @@
-let producto = '' ;
-let cantidad = 0 ;
-let precio = 0 ;
- 
+let producto = '';
+let cantidad = 0;
+let precio = 0;
+let continuarCompra = false;
+let carrito = 0;
+
+do {
+    producto = prompt("Ingresa el producto que quieres");
+    cantidad = parseInt(prompt("¿Cuántos te gustaría añadir al carrito?"))
+
+
+    switch (producto) {
+
+        case 'Detergente':
+            precio = 5000;
+            break;
+
+        case 'Suavizante':
+            precio = 6000;
+            break;
+
+        case 'Ambiental aromas':
+            precio = 8000;
+            break;
+
+        case 'Limpia pisos aromas':
+            precio = 4000;
+            break;
+
+        case 'Desmanchador líquido':
+            precio = 6000;
+            break;
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-const productos = [
-    { nombre: "Detergente", precio: 5500 },
-    { nombre: "Lavalozas", precio: 4000 },
-    { nombre: "Limpia Pisos aromas", precio: 3500 },
-    { nombre: "Suavizante", precio: 6000 },
-    { nombre: "Ambiental aromas", precio: 5500 },
-    {nombre: "Desmanchador líquido", precio: 6000 },
-] ;
-
-let carrito = []
-
-let seleccion = prompt("¡Bienvenido! ¿Desea adquirir nuestros productos de aseo/limpieza?")
-
-while(seleccion != "si" && seleccion != "no" )
-    {alert ('Por favor, escriba "si" o "no"')
-      
 
     }
+
+    carrito += precio * cantidad;
+    cantidadTotal += cantidad;
+
+    continuarCompra = confirm('¿Le gustaría agregar otro producto?')
+
+
+}
+
+while (continuarCompra);
+
+console.log(carito);
+console.log(cantidadTotal);
+
+
+
+
+
+
+
+
